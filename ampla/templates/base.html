@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{% block pagetitle %}{% endblock %}</title>
+	
+	<link href="{% static 'css/style.css'%}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script src="{% static 'js/script.js'%}"></script>
+<style>
+	/*Page specific grid layout*/
+.grid-container{
+	display: grid;
+	grid-template-areas:
+    'left left left right right right'
+    'footer footer footer footer footer footer';
+}
+</style>
+</head>
+<body>
+
+<!-- top and navigation -->
+<div class="grid-container-top">
+	<!-- top -->
+  <div class="item0">
+		<button class="ac"><a class="butn" href="account.html">Account</a></button>
+		<img class="logo" src={% static "img/HM.png" %}>	
+	</div>
+	<!-- navigation -->
+  <div class="item1">
+		<nav>
+			  <ul class="navbar-nav">
+    <li class="current">
+      <a  href="#">Homepage</a>
+    </li>
+    <li >
+      <a  href="about.html">About us</a>
+    </li>
+    <li >
+      <a  href="contact.html">Contact us</a>
+    </li>
+		<li >
+      <a  href="session.html">Session Calender</a>
+    </li>
+		<li >
+      <a  href="calander.html">My calander</a>
+    </li>
+  </ul>
+		</nav>
+	</div>
+</div>
+
+<!-- main page -->
+{% block body%}{% endblock %}
+
+</body>
+</html>

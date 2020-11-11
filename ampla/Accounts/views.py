@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import FormView, CreateView
-from Accounts.forms import LoginForm, RegisterForm
+from .forms import LoginForm, RegisterForm
 
 
 

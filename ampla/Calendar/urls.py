@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
-app_name = "Core"
+app_name = "Calendar"
 urlpatterns = [
-    path('', views.index, name='index'),
-    
+    path('calendar/', views.calendar, name='calendar'),
+    path('session/', views.session, name='session')
 ]

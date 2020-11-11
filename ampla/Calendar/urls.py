@@ -19,8 +19,5 @@ from . import views
 app_name = "Core"
 urlpatterns = [
     path('', views.index, name='index'),
-    path('about', views.about, name='about'),
-    path('contact', views.contact, name='contact'),
-    path('accounts/', include('Accounts.urls', namespace='Accounts')),
-    path('calendar/', include('Calendar.urls', namespace='Calendar')),
+    
 ]

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="container">
+    <hr>
+    Register
+    <hr>
+    <form method='POST' > {% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' value='Sign Up' />
+    </form>
+</div>
+{% endblock %}

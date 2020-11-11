@@ -17,6 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
+app_name = 'Accounts'
+
 urlpatterns = [
-    path('',views.index),
+    path('login/',views.login_page, name='login'),
+    path('logout/', views.logout_page, name='logout'),
+    path('register', views.RegisterView.as_view(), name='register'),
+    path('view', views.AccountView, name='view')
 ]

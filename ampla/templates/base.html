@@ -24,21 +24,26 @@
 <div class="grid-container-top">
 	<!-- top -->
   <div class="item0">
-		<button class="ac"><a class="butn" href="account.html">Account</a></button>
-		<img class="logo" src={% static "img/HM.png" %}>	
+  {% if user.is_authenticated %}
+		<button class="ac"><a class="butn" href="{% url 'Core:Accounts:view'%}">Account</a></button>
+  {% else %}
+  		<button class="ac"><a class="butn" href="{% url 'Core:Accounts:login'%}">Log In</a></button>
+  {% endif %}
+    <img class="logo" src={% static "img/HM.png" %}>	
+    
 	</div>
 	<!-- navigation -->
   <div class="item1">
 		<nav>
 			  <ul class="navbar-nav">
     <li class="current">
-      <a  href="#">Homepage</a>
+      <a  href="{% url 'Core:index' %}">Homepage</a>
     </li>
     <li >
-      <a  href="about.html">About us</a>
+      <a  href="{% url 'Core:about' %}">About us</a>
     </li>
     <li >
-      <a  href="contact.html">Contact us</a>
+      <a  href="{% url 'Core:contact'%}">Contact us</a>
     </li>
 		<li >
       <a  href="session.html">Session Calender</a>

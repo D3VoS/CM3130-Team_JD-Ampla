@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	/*Page specific grid layout*/
+.grid-container{
+	display: grid;
+	grid-template-areas:
+    'side right right right right right'
+		'side footer footer footer footer footer';
+}
+</style>
+</head>
+<body>
+
+<!-- top and navigation -->
+<div class="grid-container-top">
+	<!-- top -->
+  <div class="item0">
+		<button class="ac"><a class="butn" href="account.html">Account</a></button>
+		<img class="logo" src="HM.png">	
+	</div>
+	<!-- navigation -->
+  <div class="item1">
+		<nav>
+			  <ul class="navbar-nav">
+    <li>
+      <a  href="index.html">Homepage</a>
+    </li>
+    <li >
+      <a  href="about.html">About us</a>
+    </li>
+    <li >
+      <a  href="contact.html">Contact us</a>
+    </li>
+		<li >
+      <a  href="store.html">store</a>
+    </li>
+		<li >
+      <a  href="session.html">Session Calender</a>
+    </li>
+		<li  class="current">
+      <a  href="#">My calander</a>
+    </li>
+  </ul>
+		</nav>
+	</div>
+</div>
+
+<!-- main page -->
+<div class="grid-container">
+	<!-- side bar left -->
+  <div class="item6"> 
+		<div class="side">
+			side
+		</div> 
+	</div>
+	<!-- top of page -->
+  <div class="item4">
+		<!-- div for session dates-->
+		<div>
+			top
+		</div>
+	</div>
+	<!-- botton of page -->
+	<div class="item5">
+		<!-- div for calander -->
+		<div>
+			bot
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

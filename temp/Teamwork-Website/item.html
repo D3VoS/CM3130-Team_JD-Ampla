@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	/*Page specific grid layout*/
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+.grid-container{
+display: grid;
+grid-template-areas:
+  'left left left left left left'
+	'right right right right right right';
+}}
+@media only screen and (min-width: 900px) {
+/* For desktop: */
+.grid-container{
+	display: grid;
+	grid-template-areas:
+    'left left left right right right';}
+</style>
+</head>
+<body>
+
+<!-- top and navigation -->
+<div class="grid-container-top">
+	<!-- top -->
+  <div class="item0">
+		<button class="ac"><a class="butn" href="account.html">Account</a></button>
+		<img class="logo" src="HM.png">	
+	</div>
+	<!-- navigation -->
+  <div class="item1">
+		<nav>
+			  <ul class="navbar-nav">
+    <li>
+      <a  href="index.html">Homepage</a>
+    </li>
+    <li >
+      <a  href="about.html">About us</a>
+    </li>
+    <li >
+      <a  href="contact.html">Contact us</a>
+    </li>
+		<li  class="current">
+      <a  href="store.html">store</a>
+    </li>
+		<li >
+      <a  href="session.html">Session Calender</a>
+    </li>
+		<li >
+      <a  href="calander.html">My calander</a>
+    </li>
+  </ul>
+		</nav>
+	</div>
+</div>
+
+<!-- main page -->
+<div class="grid-container">
+  <div class="item2">
+		<img src="placeholder.png"/ id="photo">
+	</div>
+  <div class="item4">
+		Description
+	</div>
+</div>
+
+</body>
+</html>

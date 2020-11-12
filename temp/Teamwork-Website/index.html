@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	/*Page specific grid layout*/
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+.grid-container{
+display: grid;
+grid-template-areas:
+  'left left left left left left'
+	'right right right right right right'
+  'footer footer footer footer footer footer';
+}}
+@media only screen and (min-width: 900px) {
+/* For desktop: */
+.grid-container{
+	display: grid;
+	grid-template-areas:
+    'left left left right right right'
+    'footer footer footer footer footer footer';}
+</style>
+</head>
+<body>
+
+<!-- top and navigation -->
+<div class="grid-container-top">
+	<!-- top -->
+  <div class="item0">
+		<button class="ac"><a class="butn" href="account.html">Account</a></button>
+		<img class="logo" src="HM.png">	
+	</div>
+	<!-- navigation -->
+  <div class="item1">
+		<nav>
+			  <ul class="navbar-nav">
+    <li class="current">
+      <a  href="#">Homepage</a>
+    </li>
+    <li >
+      <a  href="about.html">About us</a>
+    </li>
+    <li >
+      <a  href="contact.html">Contact us</a>
+    </li>
+		<li >
+      <a  href="store.html">store</a>
+    </li>
+		<li >
+      <a  href="session.html">Session Calender</a>
+    </li>
+		<li >
+      <a  href="calander.html">My calander</a>
+    </li>
+  </ul>
+		</nav>
+	</div>
+</div>
+
+<!-- main page -->
+<div class="grid-container">
+  <div class="item2">
+		<img src="HMoutside.jpg"/ id="photo">
+	</div>
+  <div class="item4">
+		<h1>Hannah Miley</h1>
+		<p>Scottish swimmer Hannah Miley has over a decade of international experience and has risen to one of Scotland’s best ever female swimmers. Standing at just 5 foot 4 inches tall, the Scot comes alive when she hits the water.
+		</p>
+		<p>
+		For Miley, swimming is a family affair. She has only ever had one coach at Garioch Swimming Club, her dad, Patrick. He taught her her first stroke and she credits him as her inspiration to swim. She runs 3 miles to the pool each morning to train with her two younger brothers under their dad’s guidance. Miley said if she wasn’t a swimmer she would want to be a dancer.
+		</p>
+		<p class="heading">
+		Early Career
+		</p>
+		<p>
+		Miley’s first international call-up was in 2005 at the European Junior Championships. She won silver in the 400 meter IM. A year later, she put on the Scottish tracksuit at the Commonwealth Games racing for the first time at a senior international. She just missed the podium, touching 4th in the 400 meter IM she also finished 7th in the half distance. At her first World Championships in 2009, Miley was again just outside the medals in the 400 meter IM finishing 4th and she added a 6th place finish in the 200 meter IM.
+		</p>
+	</div>
+  <div class="item5"><img src="HMswim.jpg"/ id="photo"></div>
+</div>
+
+</body>
+</html>

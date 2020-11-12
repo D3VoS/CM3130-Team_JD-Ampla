@@ -1,1 +1,1 @@
-web: gunicorn /ampla/ampla.wsgi --log-file -
+web: gunicorn ampla.wsgi --log-file -

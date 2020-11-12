@@ -1,0 +1,177 @@
+/*whole site/background*/
+body{
+  background: rgb(181, 216, 255);
+}
+p{
+	font-size: 20px;
+	width: 90%;
+	color: black;
+}
+h1{
+	color: black
+}
+p.heading{
+	font-size: 25;
+	font-weight: bold;
+}
+.logo{
+	width: 100px;
+}
+/*top title*/
+p.title{
+	margin: 0%;	
+	padding: 5px;
+  text-align: center;
+	font-size: 40px;
+}
+/*account button*/
+button.current{
+	background:#8671E1;
+	float: right;
+	padding: 14px;
+	color: white;
+	border-radius: 6px;
+	margin: 0%;
+	font-size: 14px;
+	border: none;
+}
+.ac{
+	float: right;
+	padding: 14px;
+	color: white;
+	background:#0090c4;
+	border-radius: 6px;
+	margin: 0%;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+}
+
+
+
+a.butn{
+	display: block;
+  color: white;
+  text-decoration: none; 
+	width: 50px
+}
+
+/* top line*/
+.item0{
+	display: inline-block;
+	text-align: center;
+	border-style: solid solid none solid;
+	border-color:  black;
+	border-radius: 6px 6px 0 0px;
+	border-width: 2px;
+}
+
+div.item1{
+	background-color: #0090c4;
+	text-align: center;
+	margin:0;
+	border-style: none solid solid solid;
+	border-color:  black;
+	border-radius: 0px 0px 6px 6px;
+	border-width: 2px;
+}
+/*side bar*/
+div.side{
+	background: rgb(213, 233, 255);
+	border-style: none solid solid none;
+	border-radius: 6px 0px 6px 0px;
+	background: rgb;
+	height: 100%;
+	border-width: 2px;
+}
+/*grid definitions*/
+.item0 { grid-area: top; }
+.item1 { grid-area: header; }
+.item2 { grid-area: left; }
+.item3 {grid-area: none;}
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.item6 { grid-area: side; }
+
+/* top and nav possition*/
+.grid-container-top {
+  display: grid;
+  grid-template-areas:
+    'top top top top top top'
+    'header header header header header header';
+}
+
+/* grid example
+.grid-container{
+	display: grid;
+	grid-template-areas:
+    'left left left right right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+}
+*/
+
+/*defauts for grid*/
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+  font-size: 30px;
+}
+
+/*top and navigation grid*/
+.grid-container-top > div {
+  background-color: white;
+
+  font-size: 30px;
+	margin: 0;
+	padding: 0;
+
+
+}
+
+/*Nav items*/
+ul {
+		padding: 0;
+		list-style: none;
+		font-size: 0;
+}
+
+ul li{
+	font-size: 20px;
+  display: inline-block;
+  background:#0090c4;
+	margin: 2px 2%;
+  border-radius: 6px;
+  align-content: center;
+}
+
+ul li.current{
+	background:#350076;
+}
+
+ul li:hover{
+	background:#350076;
+}
+.ac:hover{
+	background:#350076;
+}
+ul li a{  
+	display: block;
+  color: white;
+  text-decoration: none; 
+  padding: 8px 0px;
+	width: 200px
+}
+/* default for pictures */
+#photo{
+	width: 100%
+}
+
+@media only screen and (min-width: 600px){
+	  /* For tablets: */
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+	
+}

@@ -33,7 +33,7 @@ def logout_page(request):
     #Logs the user out
     logout(request)
     #Returns the user to the logout page
-    return render(request, 'logout.html')
+    return redirect('Core:index')
 
 class RegisterView(CreateView):
     #Creates a registration form

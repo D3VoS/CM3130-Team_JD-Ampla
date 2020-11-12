@@ -5,26 +5,11 @@
 <div class="grid-container">
 	<!-- form layout -->
   <div class="item2">
-		<!-- name input div -->
-		<div>
-			<p>Name</p>
-		</div>
-		<!-- email input div -->
-		<div>
-			<p>Email address</p>
-		</div>
-		<!-- message input div -->
-		<div>
-			<p>Message</p>
-		</div>
-		<!-- text -->
-		<div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</div>
-		<!-- tick box div -->
-		<div>
-			<p>conscent about data storage</p>
-		</div>	
+		<form method='POST' > {% csrf_token %}
+			{{ form.as_p }}
+			<input type='submit' value='Submit Form' />
+		</form>
+			
 	</div>
   <div class="item4">
 		<img src="placeholder.png"/ id="photo">

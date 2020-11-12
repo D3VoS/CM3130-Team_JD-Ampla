@@ -1,14 +1,14 @@
 /*whole site/background*/
 body{
-  background: #8671E1;
+  background: rgb(181, 216, 255);
 }
 p{
 	font-size: 20px;
 	width: 90%;
-	color: white;
+	color: black;
 }
 h1{
-	color: white
+	color: black
 }
 p.heading{
 	font-size: 25;
@@ -39,7 +39,7 @@ button.current{
 	float: right;
 	padding: 14px;
 	color: white;
-	background:#76A7f4;
+	background:#0090c4;
 	border-radius: 6px;
 	margin: 0%;
 	font-size: 14px;
@@ -60,17 +60,29 @@ a.butn{
 .item0{
 	display: inline-block;
 	text-align: center;
-
+	border-style: solid solid none solid;
+	border-color:  black;
+	border-radius: 6px 6px 0 0px;
+	border-width: 2px;
 }
 
 div.item1{
 	background-color: #0090c4;
 	text-align: center;
 	margin:0;
+	border-style: none solid solid solid;
+	border-color:  black;
+	border-radius: 0px 0px 6px 6px;
+	border-width: 2px;
 }
+/*side bar*/
 div.side{
-	background: #B69FF2;
+	background: rgb(213, 233, 255);
+	border-style: none solid solid none;
+	border-radius: 6px 0px 6px 0px;
+	background: rgb;
 	height: 100%;
+	border-width: 2px;
 }
 /*grid definitions*/
 .item0 { grid-area: top; }
@@ -108,7 +120,7 @@ div.side{
 
 /*top and navigation grid*/
 .grid-container-top > div {
-  background-color: #6b8ce6;
+  background-color: white;
 
   font-size: 30px;
 	margin: 0;
@@ -127,20 +139,21 @@ ul {
 ul li{
 	font-size: 20px;
   display: inline-block;
-  background:#76A7f4;
+  background:#0090c4;
 	margin: 2px 2%;
   border-radius: 6px;
   align-content: center;
 }
+
 ul li.current{
-	background:#8671E1;
+	background:#350076;
 }
 
 ul li:hover{
-	background:#8671E1;
+	background:#350076;
 }
 .ac:hover{
-	background:#8671E1;
+	background:#350076;
 }
 ul li a{  
 	display: block;
@@ -152,4 +165,13 @@ ul li a{
 /* default for pictures */
 #photo{
 	width: 100%
+}
+
+@media only screen and (min-width: 600px){
+	  /* For tablets: */
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+	
 }

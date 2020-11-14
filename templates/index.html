@@ -1,98 +1,50 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block style %}
+	/*Page specific grid layout*/
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+.grid-container{
+display: grid;
+grid-template-areas:
+  'left left left left left left'
+	'right right right right right right'
+  'footer footer footer footer footer footer';
+}}
+@media only screen and (min-width: 900px) {
+/* For desktop: */
+.grid-container{
+	display: grid;
+	grid-template-areas:
+    'left left left right right right'
+    'footer footer footer footer footer footer';}{% endblock %}
 {% block body %}
+{% block body %}
+<div style="
+    padding-top: 73px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 73px;
+		"
+>
 <!-- main page -->
 <div class="grid-container">
   <div class="item2">
-		<img src="{% static 'img/HMoutside.jpg' %}"/ id="photo">
-		
-		<img src="{% static 'img/HMprof.jpg' %}"/ id="photo">
+		<img src="HMoutside.jpg"/ id="photo">
 	</div>
-  <div class="item4">
+  <div class="item4" 
+	style="padding-left: 30px;""
+>
 		<h1>Hannah Miley</h1>
 		<p>Scottish swimmer Hannah Miley has over a decade of international experience and has risen to one of Scotland’s best ever female swimmers. Standing at just 5 foot 4 inches tall, the Scot comes alive when she hits the water.
 		</p>
 		<p>
 		For Miley, swimming is a family affair. She has only ever had one coach at Garioch Swimming Club, her dad, Patrick. He taught her her first stroke and she credits him as her inspiration to swim. She runs 3 miles to the pool each morning to train with her two younger brothers under their dad’s guidance. Miley said if she wasn’t a swimmer she would want to be a dancer.
 		</p>
-		<p class="heading">
-		Early Career
-		</p>
-		<p>
-		Miley’s first international call-up was in 2005 at the European Junior Championships. She won silver in the 400 meter IM. A year later, she put on the Scottish tracksuit at the Commonwealth Games racing for the first time at a senior international. She just missed the podium, touching 4th in the 400 meter IM she also finished 7th in the half distance. At her first World Championships in 2009, Miley was again just outside the medals in the 400 meter IM finishing 4th and she added a 6th place finish in the 200 meter IM.
-		</p>
-		<p class="heading">
-		2008 Olympic Debut
-		</p>
-		<p>
-		Miley qualified for her first Olympic Games in 200 and 400 IM and 800 meter freestyle relay. She gained valuable experience in the 400 meter IM final, finishing 6th. She finished 11th overall in the 200 IM and Great Britain finished 9th overall in the relay.
-		</p>
-		<p class="heading">
-		2010 Season- International Medal Haul
-		</p>
-		<p>
-		With 2010 came Miley’s first senior international medals at the European Championships and the Commonwealth Games. At the European Championships in Hungary, Miley raced to a new championship record in the 400 meter IM, Beating out Katinka Hosszu in front of her home crowd by more than three seconds.
-		</p>
-		<p>
 
-		Miley added bronzes in the 200 meter IM and the 800 meter freestyle relay.
-		</p>
-		<p>
-		At the Commonwealth games, Miley had a busy meet swimming five events and making the final in each. Her best performance unsurprisingly came in the 400 meter IM where she had another gold medal performance in a new games record.
-		</p>
-		<p class="heading">
-		2011 FINA World Championships
-		</p>
-		<p>
-		In the 400 meter IM in Shanghai, Miley swam the race true to her form. After the first stroke, Miley sat at the back of the pack but with each stroke she clawed her way back up. At halfway she sat in 6th place but on the breaststroke leg, Miley turned up the heat moving up to 3rd. She eventually touched to take silver in 4:34.22.
-		</p>
-		<p class="heading">
-		2012 Olympic Games
-		</p>
-		<p>
-		Coming off a successful season in 2011, the home crowd’s eyes were looking for Miley to take one of the first golds of the games for Great Britain. But Miley had to settle with a 5th place in her best event. She made the final in the 200 meter IM finishing 7th and the 800 meter freestyle relay finishing 5th.
-		</p>
-		<p class="heading">
-		2013 FINA World Championships
-		</p>
-		<p>
-		In Barcelona, Miley was unable to repeat her success from two years before, finishing 5th in the 400 IM and 17th in 200 meter breaststroke.
-		</p>
-		<p class="heading">
-		2014 Commonwealth Games
-		</p>
-		<p>
-		In front of a home crowd in Glasgow, Miley impressed again at the Commonwealth Games. She reclaimed her 400 meter IM title almost 7 seconds faster than the last games with a record time of 4:31.76. She made it on the podium again in the half distance, finishing with a bronze medal. She also made the final in the 200 breaststroke and 400 freestyle finishing 4th, 800 freestyle and 800 freestyle relay finishing 5th and the 200 butterfly finishing 6th.
-		</p>
-		<p class="heading">
-		2015 FINA World Championships
-		</p>
-		<p>
-		Miley’s best finish came in the 400 meter IM with a 4th place. After the meet Miley issued an apology for not making the podium feeling she had not lived up to the high expectations of her. She contemplated leaving the sport, but after regaining her confidence with the help of her family and psychologists, Miley was back on track and qualified for her third Olympic Games.
-		</p>
-		<p class="heading">
-		2016 Olympic Games
-		</p>
-		<p>
-		In Rio Miley again finished a painful 4th in the 400 IM, only .4 outside of medaling. She swam the 200 IM later in the meet and finished in a tie for 12th in semis.
-		</p>
-		<p class="heading">
-		2017 FINA World Championships
-		</p>
-		<p>
-		Miley swam the IM events once again at the World Champs, placing 8th in the 400 IM and 9th in the 200 IM.
-		</p>
-		<p class="heading">
-		2018 Commonwealth Games
-		</p>
-		<p>
-		In Gold Coast, Miley ended her medal drought with a silver in the 400 IM, representing Scotland and touching in a time of 4:35.16. In the 200 IM, she was 3rd heading into finals, but fell to 6th overall.
-		</p>
-		<p class="heading">
-		2018 European Championships
-		</p>
-		<p>
-		Miley earned her 2nd medal of the season in the 400 IM in Glasgow, this time a bronze, adding just a tick to her Comm Games time to touch in 4:35.34</p></div>
-  <div class="item5"><img src="HMswim.jpg"/ id="photo"></div>
+	</div>
+  <div class="item5">footer</div>
+</div>
 </div>
 {% endblock %}

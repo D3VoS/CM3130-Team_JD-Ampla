@@ -9,13 +9,7 @@
 	<link href="{% static 'css/style.css'%}" type="text/css" rel="stylesheet" media="screen,projection"/>
     <script src="{% static 'js/script.js'%}"></script>
 <style>
-	/*Page specific grid layout*/
-.grid-container{
-	display: grid;
-	grid-template-areas:
-    'left left left right right right'
-    'footer footer footer footer footer footer';
-}
+{% block style %}{% endblock %}
 </style>
 </head>
 <body>

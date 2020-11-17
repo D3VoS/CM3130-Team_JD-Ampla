@@ -93,6 +93,9 @@ div.side{
 .item5 { grid-area: footer; }
 .item6 { grid-area: side; }
 .item7 { grid-area: main; }
+.logo  { grid-area: logo;}
+.des	{ grid-area: desc;}
+.link	{ grid-area: link;}
 
 /* top and nav possition*/
 .grid-container-top {
@@ -101,7 +104,7 @@ div.side{
     'top top top top top top'
     'header header header header header header'
     'main main main main main main'
-    'footer footer footer footer footer footer'
+    'footer footer footer footer footer footer';
 }
 
 /* grid example
@@ -192,4 +195,8 @@ ul li a{
 	border-color:  black;
 	border-radius: 6px;
 	border-width: 2px;
+}
+
+.ft{
+	width: 100px;
 }

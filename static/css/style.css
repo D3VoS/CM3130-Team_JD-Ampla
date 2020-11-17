@@ -115,7 +115,10 @@ div.side{
     'footer footer footer footer footer footer';
   grid-gap: 10px;
 }
-
+.grid-main > div {
+	font-size: 30px;
+	margin: 0;
+	padding: 0;}
 
 /*defauts for grid*/
 .grid-container > div {

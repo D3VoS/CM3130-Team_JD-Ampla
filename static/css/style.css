@@ -113,7 +113,6 @@ div.side{
 	'nav nav nav nav nav nav'
     'main main main main main main'
     'footer footer footer footer footer footer';
-  grid-gap: 10px;
 }
 .grid-main > div {
 	font-size: 30px;

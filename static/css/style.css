@@ -92,13 +92,16 @@ div.side{
 .item4 { grid-area: right; }
 .item5 { grid-area: footer; }
 .item6 { grid-area: side; }
+.item7 { grid-area: main; }
 
 /* top and nav possition*/
 .grid-container-top {
   display: grid;
   grid-template-areas:
     'top top top top top top'
-    'header header header header header header';
+    'header header header header header header'
+    'main main main main main main'
+    'footer footer footer footer footer footer'
 }
 
 /* grid example
@@ -167,11 +170,26 @@ ul li a{
 	width: 100%
 }
 
-@media only screen and (min-width: 600px){
-	  /* For tablets: */
+/* footer possition */
+.grid-container-bot{
+	display: grid;
+	grid-template-areas:
+  'logo desc desc link link link';
 }
 
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-	
+/*footer style*/
+.grid-container-bot > div {
+  font-size: 20px;
+	margin: 0;
+	padding: 70px 5%;
+	width: 100%
+}
+
+.item5{
+	background: white;
+	text-align: center;
+	border-style: solid solid solid solid;
+	border-color:  black;
+	border-radius: 6px;
+	border-width: 2px;
 }

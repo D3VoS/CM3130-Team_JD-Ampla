@@ -178,7 +178,7 @@ ul li a{
 .grid-container-bot{
 	display: grid;
 	grid-template-areas:
-  'logo desc desc link link link';
+ 	 'logo desc desc link link link';
 }
 
 /*footer style*/

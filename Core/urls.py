@@ -23,4 +23,5 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('accounts/', include('Accounts.urls', namespace='Accounts')),
     path('calendar/', include('Calendar.urls', namespace='Calendar')),
+    path('store/', include('Store.urls', namespace='Store')),
 ]

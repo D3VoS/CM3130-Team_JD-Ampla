@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Accounts',
     'Core',
     'Calendar',
+    'Store',
 ]
 
 #Overrides the base user model

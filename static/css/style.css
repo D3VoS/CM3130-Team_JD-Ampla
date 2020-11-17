@@ -93,6 +93,7 @@ div.side{
 .item5 { grid-area: footer; }
 .item6 { grid-area: side; }
 .item7 { grid-area: main; }
+.item8 { grid-area: nav; }
 .logo  { grid-area: logo;}
 .des	{ grid-area: desc;}
 .link	{ grid-area: link;}
@@ -102,20 +103,19 @@ div.side{
   display: grid;
   grid-template-areas:
     'top top top top top top'
-    'header header header header header header'
-    'main main main main main main'
-    'footer footer footer footer footer footer';
+    'header header header header header header';
 }
 
-/* grid example
-.grid-container{
+/* main layout */
+.grid-main{
 	display: grid;
 	grid-template-areas:
-    'left left left right right right'
+	'nav nav nav nav nav nav'
+    'main main main main main main'
     'footer footer footer footer footer footer';
   grid-gap: 10px;
 }
-*/
+
 
 /*defauts for grid*/
 .grid-container > div {

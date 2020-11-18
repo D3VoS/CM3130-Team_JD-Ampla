@@ -1,3 +1,9 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
 /*whole site/background*/
 body{
   background: rgb(181, 216, 255);
@@ -113,9 +119,12 @@ div.side{
 	'nav nav nav nav nav nav'
     'main main main main main main'
     'footer footer footer footer footer footer';
-  grid-gap: 10px;
+	display: block;
 }
-
+.grid-main > div {
+	font-size: 30px;
+	margin: 0;
+	padding: 0;}
 
 /*defauts for grid*/
 .grid-container > div {

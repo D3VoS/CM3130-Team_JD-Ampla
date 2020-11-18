@@ -119,7 +119,7 @@ div.side{
 	'nav nav nav nav nav nav'
     'main main main main main main'
     'footer footer footer footer footer footer';
-	width: 100%;
+	display: block;
 }
 .grid-main > div {
 	font-size: 30px;

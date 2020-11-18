@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<!-- main page -->
+{% for item in items %}
+<p> Name: {{ item.productName }}  Price: {{ item.productPrice }} <img src="{{ item.productImageLink }}"/> </p> <br>
+{% endfor %}
+{% endblock %}

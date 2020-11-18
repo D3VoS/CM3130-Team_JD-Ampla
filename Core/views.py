@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
+from django.contrib import messages
+
 
 
 # Create your views here.

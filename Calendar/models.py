@@ -2,16 +2,17 @@ from django.db import models
 from Accounts.models import User
 # Create your models here.
 
-class myCalendar(models.Model):
-    myCreator = models.ForeignKey(User, on_delete=models.CASCADE)
-    myName = models.CharField(max_length=50)
-    myDate = models.DateField()
-    myLocation = models.CharField(max_length=50)
-    myDuration = models.IntegerField()
-    myDescription = models.CharField(max_length=1000)
-    myCapacity = models.IntegerField()
-    myCost = models.FloatField(max_length=6)
-    myBooked = models.IntegerField()
+class event(models.Model):
+    eventCreator = models.ForeignKey(User, on_delete=models.CASCADE)
+    eventName = models.CharField(max_length=50)
+    eventDate = models.DateField()
+    eventLocation = models.CharField(max_length=50)
+    eventDuration = models.IntegerField()
+    eventDescription = models.CharField(max_length=1000)
+    eventCapacity = models.IntegerField()
+    eventCost = models.FloatField(max_length=6)
+    eventBooked = models.IntegerField()
 
-#class CreateEvent(models.Model):
-    #eventCreator = models.CharField()
+class bookingEvent(models.Model):
+    bookingEventID = models.ForeignKey(event, on_delete=models.CASCADE)
+    bookingUser = models.ForeignKey(User, on_delete=models.CASCADE)

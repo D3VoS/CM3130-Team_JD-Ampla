@@ -2,56 +2,68 @@ $(document).ready(function(){
     const calendar = document.querySelector("#app-calendar");
 
     var d = new Date();
-    var m = d.getMonth(); // Actual Month
-    var y = d.getFullYear(); // Actual Year
-    var day = d.getDay();
+    var currentMonth = d.getMonth(); // Actual Month
+    var currentYear = d.getFullYear(); // Actual Year
+    let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    let months = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
 
     function getNoOfDaysInMonth(month, year){ // Gets the number of days in the month
-        return new Date(year, month, 0).getDate();
+        return new Date(year, month + 1, 0).getDate();
     }
+
+    console.log(getNoOfDaysInMonth(0, 2020, 0));
 
     function getFirstDayOfMonth(month, year){
         return new Date(year, month, 1).getDay();
     }
 
-    var n = 0; //Extra Months
-    var z = 0; //Extra Years
-    var yz = y + z //Current Year Selected
-    var mn = m + n //Current Month Selected
-
-    noOfDays = getNoOfDaysInMonth(mn, yz);
-    weekday = getFirstDayOfMonth(mn, yz)
+    var calculatedMonth = currentMonth; //Extra Months
+    var calculatedYear = currentYear; //Extra Years
     
-    for (let day = 1; day <= noOfDays; day++){
 
-        
-
-        $(".calendarDates").append( `<div class = "day">${day}</div>`)
-        console.log(weekday)
+    function getHeading(){
+        $("#heading").html(`<h1>${months[calculatedMonth] + " " + calculatedYear}</h1>`) // Creates the title
     }
     
+    function getCalendar(){
+        $(".calendarDates").empty();
+        getFirstDayOfMonth(calculatedMonth, calculatedYear);
+        for (let day = 1; day <= getNoOfDaysInMonth(calculatedMonth, calculatedYear); day++){
+            $(".calendarDates").append(`<div class = "day">${day}</div>`);
+        }
+
+        console.log(currentMonth, calculatedMonth, calculatedYear, getNoOfDaysInMonth(calculatedMonth, calculatedYear));
+    }
+    
+    getHeading();
+    getCalendar();
+    
     $("#next").click(function(){
-        if (mn == 12){ // If the person goes over 12 months, it adds 1 to the year and resets the month
-            n = -(m - 1);
-            z++;
-            mn = m + n;
-            yz = y + z
+        
+        if (calculatedMonth >= 11){ // If the person goes over 12 months, it adds 1 to the year and resets the month
+            calculatedMonth = 0;
+            calculatedYear++;
+            getHeading();
+            getCalendar();
         }
         else{
-            n++;
-            mn = m + n;
+            calculatedMonth++;
+            getHeading();
+            getCalendar();
         }
     });
     $("#previous").click(function(){
-        if (mn == 1){ //Reverse of #next function
-            n = (12 - m);
-            z--;
-            mn = m + n;
-            yz = y + z;
+        if (calculatedMonth <= 0){ //Reverse of #next function
+            calculatedMonth = 11;
+            calculatedYear--;
+            getHeading();
+            getCalendar();
         }
         else{
-            n--;
-            mn = m + n
+            calculatedMonth--;
+            getHeading();
+            getCalendar();
         }
     });
     

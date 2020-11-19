@@ -70,22 +70,20 @@ div.side{
 
 .grid-main > div {
 	font-size: 30px;
-	margin: 0;
-	padding: 0;}
+	padding: 0;
+}
 
 /*defauts for grid*/
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0);
-  text-align: center;
-  font-size: 30px;
+  	background-color: rgba(255, 255, 255, 0);
+  	text-align: center;
+  	font-size: 30px;
 }
 
 /*top and navigation grid*/
 .grid-container-top > div {
-  background-color: white;
-
-  font-size: 30px;
-	margin: 0;
+	background-color: white;
+	font-size: 30px;
 	padding: 0;
 
 
@@ -113,8 +111,8 @@ div.side{
 
 /*footer style*/
 .grid-container-bot > div {
-  font-size: 20px;
-	margin: 0;
+ 	font-size: 20px;
+  	margin-bottom: 15px;
 	padding: 70px 5%;
 	width: 100%
 }

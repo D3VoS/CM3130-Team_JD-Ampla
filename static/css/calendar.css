@@ -1,12 +1,12 @@
 #app-calendar{
     max-width: 90%;
     margin: auto;
+    border: 1px solid black;
 }
 
 .controlsButtons{
     margin: auto;
     width: 90%;
-    border: 3px solid green;
     padding: 10px;
 }
 
@@ -25,18 +25,32 @@
     font-size: 20px;
 }
 
-.calendarDates{
+.calendarDates, .calendarHeadings{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+}
+
+.calendarDateDay{
+    font-size: 24px;
+    padding:3px;
 }
 
 .day{
     background-color: #cccccc;
     padding-bottom: 80%;
     margin:0;
-    border: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
 }
 
 .day:hover{
     background-color: #ffffff;
+}
+
+.controlButtons .button{
+    background-color: white;
+}
+
+.controlButtons .button:hover{
+    background-color: #cccccc;
 }

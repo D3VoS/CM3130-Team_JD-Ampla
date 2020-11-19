@@ -20,7 +20,11 @@
 <div class="grid-main">
   <div class="item8"></div>
     <!-- top and navigation -->
-    <div class="grid-container-top">
+    <div class="grid-container-top" style="
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+">
       <!-- top -->
       <div class="item0">
       {% if user.is_authenticated %}
@@ -61,7 +65,11 @@
     {% block body%}{% endblock %}
   </div>
   <div class="item5">
-    <div class="grid-container-bot">
+    <div class="grid-container-bot" style="
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+">
       
       <div class="logo">
       <img class="ft" src={% static "/img/HM.png" %}>

@@ -100,7 +100,18 @@ div.side{
 	padding: 15% 0;
 }
 
-
+/* default for pictures */
+#pic1{
+    width: 50%;
+    border-radius: 8px;
+    margin: 15% 0;
+}
+/* default for pictures */
+#pic2{
+    width: 50%;
+    border-radius: 8px;
+    margin: 15% 0;
+}
 
 /*footer style*/
 .grid-container-bot > div {

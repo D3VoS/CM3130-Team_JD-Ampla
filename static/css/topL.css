@@ -15,7 +15,7 @@ p {
     font-size: 25px;
     width: 90%;
     color: black;
-    padding: 3% 0;
+    padding: 2% 0;
 }
 
 h1{
@@ -50,3 +50,12 @@ padding: 8px 0px;
 width: 200px
 }
 
+p > input {
+  width: 99%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

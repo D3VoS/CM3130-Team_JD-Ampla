@@ -2,9 +2,7 @@
 {% load static %}
 {% block body %}
 <div class="container">
-    <hr>
-    Login
-    <hr>
+    <p class="header">Login</p>
     <form method='POST' > {% csrf_token %}
         {{ form.as_p }}
         <input type='submit' value='Log In' />

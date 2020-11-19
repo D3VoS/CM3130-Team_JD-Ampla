@@ -2,6 +2,31 @@
 {% load static %}
 {% block body %}
 
-<!--- Calendar stuff to add-->
+<script src = "{% static 'js/calendar.js' %}"></script>
+
+<div id = "app-calendar">
+    <div class = "controlButtons">
+        <div class="topControls">
+            <div id = "previous">
+                Previous
+            </div>
+            <div id = "next">
+                Next
+            </div>
+        </div>
+        <div class = "botControls">
+            View
+            <div id = "week">
+                Week
+            </div>
+            <div id = "month">
+                Month
+            </div>
+            <div id = "year">
+                Year
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

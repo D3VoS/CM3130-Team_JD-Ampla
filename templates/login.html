@@ -2,12 +2,12 @@
 {% load static %}
 {% block body %}
 <div class="container">
-    <hr>
-    Login
-    <hr>
+    <p class="header">Login</p>
+    <div class=box>
     <form method='POST' > {% csrf_token %}
         {{ form.as_p }}
         <input type='submit' value='Log In' />
     </form>
+    </div>
 <p>Don't have an account? <a href="{% url 'Core:Accounts:register' %}">Register here<a></p>
 {% endblock %}

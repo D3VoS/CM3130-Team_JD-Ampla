@@ -1,0 +1,39 @@
+
+/*grid definitions*/
+.item0 { grid-area: top; }
+.item1 { grid-area: header; }
+.item2 { grid-area: left; }
+.item3 {grid-area: none;}
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.item6 { grid-area: side; }
+.item7 { grid-area: main; }
+.item8 { grid-area: nav; }
+.logo  { grid-area: logo;}
+.des	{ grid-area: desc;}
+.link	{ grid-area: link;}
+
+/* top and nav possition*/
+.grid-container-top {
+  display: grid;
+  grid-template-areas:
+    'top top top top top top'
+    'header header header header header header';
+}
+
+/* main layout */
+.grid-main{
+	display: grid;
+	grid-template-areas:
+	'nav nav nav nav nav nav'
+    'main main main main main main'
+    'footer footer footer footer footer footer';
+	display: block;
+}
+
+/* footer possition */
+.grid-container-bot{
+	display: grid;
+	grid-template-areas:
+ 	 'logo desc desc link link link';
+}

@@ -3,8 +3,12 @@
 {% block body %}
 
 <script src = "{% static 'js/calendar.js' %}"></script>
+<link href = "{% static 'css/calendar.css'%}" type = "text/css" rel = "stylesheet" media = "screen, projection"/>
 
 <div id = "app-calendar">
+    <div id = "heading">
+        
+    </div>
     <div class = "controlButtons">
         <div class="topControls">
             <div id = "previous">
@@ -26,6 +30,9 @@
                 Year
             </div>
         </div>
+    </div>
+    <div class = "calendarDates">
+
     </div>
 </div>
 

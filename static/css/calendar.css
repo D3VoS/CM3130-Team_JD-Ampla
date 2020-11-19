@@ -1,0 +1,38 @@
+#app-calendar{
+    max-width: 90%;
+    margin: auto;
+}
+
+.controlsButtons{
+    margin: auto;
+    width: 90%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.topControls{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.botControls{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.calendarDates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day{
+    background-color: #cccccc;
+    padding-bottom: 80%;
+    margin:0;
+    border: 1px solid black;
+}
+
+.day:hover{
+    background-color: #ffffff;
+}

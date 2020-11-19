@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.contrib import messages
-
-
+from django.contrib.auth.decorators import user_passes_test
+from .models import Contact
 
 # Create your views here.
 def index(request):
@@ -12,7 +12,7 @@ def about(request):
     return render(request, 'about.html')
 
 def contact(request):
-    form = ContactForm(data=request.POST or None)
+    form = ContactForm(creator=request.user, data=request.POST or None)
     try:
         if form.is_valid():
             form.save()
@@ -20,9 +20,14 @@ def contact(request):
             return redirect('Core:index')
     except Exception as e:
         #Displays an error message
-        messages.warning(request, 'Error :(; The specified form could not be submitted. Error {}'.format(e))
+        print(e)
     context = {
         'form': form
     }
-    return render(request, 'contact.html', context )
-    
+    return render(request, 'contact.html', context)
+
+def admin_index(request):
+    items = Contact.objects.all()
+    context = {"items": items}
+    print(len(context['items']))
+    return render(request, 'admin_index.html', context)

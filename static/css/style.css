@@ -33,7 +33,6 @@ button.current{
 }
 
 
-
 a.butn{
 	display: block;
   color: white;
@@ -98,6 +97,7 @@ div.side{
 #photo{
 	width: 100%;
 	border-radius: 8px;
+	padding: 15% 0;
 }
 
 
@@ -122,3 +122,31 @@ div.side{
 .ft{
 	width: 100px;
 }
+
+p.heading{
+	font-size: 25;
+	font-weight: bold;
+}
+
+ul li.current{
+	background:#350076;
+	}
+	
+ul li:hover{
+	background:#350076;
+	}
+	
+.ac:hover{
+	background:#350076;
+	}
+
+
+p.heading{
+	padding: 6% 0 4% 0;
+}
+
+
+.Cl{
+	background: white;
+}
+

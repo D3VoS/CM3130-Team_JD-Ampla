@@ -4,22 +4,27 @@
 	list-style: none;
 	text-decoration: none;
 }
+
 /*whole site/background*/
 body{
   background: rgb(181, 216, 255);
+  font-family: Arial, Helvetica, sans-serif;
 }
-p{
-	font-size: 20px;
-	width: 90%;
-	color: black;
+
+p {
+    font-size: 25px;
+    width: 90%;
+    color: black;
+    padding: 3% 0;
 }
+
 h1{
-	color: black
+	color: black;
+	padding: 6% 0 0 0;
+	text-align: center;
 }
-p.heading{
-	font-size: 25;
-	font-weight: bold;
-}
+
+
 
 /*Nav items*/
 ul {
@@ -37,18 +42,6 @@ border-radius: 6px;
 align-content: center;
 }
 
-ul li.current{
-background:#350076;
-}
-
-ul li:hover{
-background:#350076;
-}
-
-.ac:hover{
-background:#350076;
-}
-
 ul li a{  
 display: block;
 color: white;
@@ -56,3 +49,4 @@ text-decoration: none;
 padding: 8px 0px;
 width: 200px
 }
+

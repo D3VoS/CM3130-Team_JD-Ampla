@@ -165,3 +165,11 @@ p.heading{
 .container {
     margin: 5px;
 }
+
+.box {
+    background: white;
+    border: solid;
+    padding: 0.5% 2%;
+    border-width: 1px;
+    border-radius: 8px;
+}

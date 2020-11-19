@@ -23,13 +23,17 @@
     <div class="grid-container-top">
       <!-- top -->
       <div class="item0">
+      
       {% if user.is_authenticated %}
         <button class="ac"><a class="butn" href="{% url 'Core:Accounts:logout'%}">Log Out</a></button>
         <button class="ac"><a class="butn" href="{% url 'Core:Accounts:view'%}">Account</a></button>
       {% else %}
           <button class="ac"><a class="butn" href="{% url 'Core:Accounts:login'%}">Log In</a></button>
       {% endif %}
-        <img class="logo" src={% static "/img/HM.png" %}> 
+        <img class="logo" src={% static "/img/HM.png" %}>
+      {% if user.is_admin %}
+      <button class="ac"><a class="butn" href="{% url 'Core:admin'%}">Admin</a></button>
+      {% endif %}
         
       </div>
       <!-- navigation -->

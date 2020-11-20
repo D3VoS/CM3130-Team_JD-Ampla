@@ -3,7 +3,7 @@
 {% block body %}
 <div class="container">
     <p class="header">Register</p>
-    <div class=box></div>
+    <div class=box>
         <form method='POST' > {% csrf_token %}
             {{ form.as_p }}
             <input type='submit' value='Sign Up' />

@@ -9,31 +9,29 @@ $(document).ready(function(){
     "July", "August", "September", "October", "November", "December"];
 
     function getNoOfDaysInMonth(month, year){ // Gets the number of days in the month
-        return new Date(year, month + 1, 0).getDate();
+        return new Date(year, month + 1, 0).getDate(); 
     }
-
-    console.log(getNoOfDaysInMonth(0, 2020, 0));
 
     function getFirstDayOfMonth(month, year){
         return new Date(year, month, 1).getDay();
     }
+
+
 
     var calculatedMonth = currentMonth; //Extra Months
     var calculatedYear = currentYear; //Extra Years
     
 
     function getHeading(){
-        $("#heading").html(`<h1>${months[calculatedMonth] + " " + calculatedYear}</h1>`) // Creates the title
+        $("#heading").html(`${months[calculatedMonth] + " " + calculatedYear}`) // Creates the title
     }
     
     function getCalendar(){
         $(".calendarDates").empty();
-        getFirstDayOfMonth(calculatedMonth, calculatedYear);
+        
         for (let day = 1; day <= getNoOfDaysInMonth(calculatedMonth, calculatedYear); day++){
             $(".calendarDates").append(`<div class = "day">${day}</div>`);
         }
-
-        console.log(currentMonth, calculatedMonth, calculatedYear, getNoOfDaysInMonth(calculatedMonth, calculatedYear));
     }
     
     getHeading();

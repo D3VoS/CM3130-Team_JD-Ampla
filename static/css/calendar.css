@@ -1,7 +1,6 @@
 #app-calendar{
-    max-width: 90%;
-    margin: auto;
-    border: 1px solid black;
+    width: 90%;
+    margin: 30px auto auto auto;
 }
 
 .controlsButtons{
@@ -10,19 +9,47 @@
     padding: 10px;
 }
 
+#heading{
+    font-size: 36px;
+    font-weight:bolder;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#botHeading{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
 .topControls{
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 30%;
+    cursor: pointer;
 }
 
 .botControls{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin:auto auto 30px auto;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
 }
 
 .button{
     font-size: 20px;
+    height:30px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px grey solid;
+}
+
+.calendarDates{
+    border-left:3px solid black;
 }
 
 .calendarDates, .calendarHeadings{
@@ -32,15 +59,27 @@
 
 .calendarDateDay{
     font-size: 24px;
-    padding:3px;
+    text-align: center;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.calendarDateDay:last-child{
+    border-right: 3px solid black;
+}
+
+.calendarDateDay:first-child{
+    border-left: 3px solid black;
 }
 
 .day{
     background-color: #cccccc;
     padding-bottom: 80%;
     margin:0;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
+    font-size: 20px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    cursor: pointer;
 }
 
 .day:hover{

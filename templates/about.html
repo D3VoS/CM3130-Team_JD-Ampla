@@ -12,13 +12,17 @@ grid-template-areas:
 	'right right right right right right'
   'footer footer footer footer footer footer';
 }}
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1100px) {
 /* For desktop: */
 .grid-container{
 	display: grid;
 	grid-template-areas:
     'left left left right right right'
-    'footer footer footer footer footer footer';}
+	'footer footer footer footer footer footer';}
+	
+.sp{
+	padding: 0;
+}
 {% endblock %}
 {% block body %}
 <!-- main page -->
@@ -27,11 +31,12 @@ grid-template-areas:
 		<div class="item2">
 			<img src="/static/img/HMab.png" id="pic1">
 		</div>
-		<div class="item4">
-			<h1>Hannah Miley</h1>
-			<p>Having spent most of her life in water waiting to grow either gills or a fish tail, she’s starting to find her feet on land. Whilst mortgages and working out taxes may still be a mystery to her she has a good passion for working with  people, inspiring and working with those who are determined to reach a goal, no matter the challenges they face. 
-			</p>
-			
+			<div class="item4">
+				<div class="sp"></div>
+				<h1>Hannah Miley</h1>
+				<p >Having spent most of her life in water waiting to grow either gills or a fish tail, she’s starting to find her feet on land. Whilst mortgages and working out taxes may still be a mystery to her she has a good passion for working with  people, inspiring and working with those who are determined to reach a goal, no matter the challenges they face. 
+				</p>
+			</div>
 			
 		</div>
 	</div>

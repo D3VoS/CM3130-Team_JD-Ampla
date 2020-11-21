@@ -5,19 +5,13 @@
 <div class="grid-container">
 	<!-- form layout -->
 	<div class="item2">
-		<form method='POST' > {% csrf_token %}
-			{{ form.as_p }}
-			<input type='submit' value='Submit Form' />
-		</form>
-			
+		<div class="box">
+			<form method='POST' > {% csrf_token %}
+				{{ form.as_p }}
+				<input type='submit' value='Submit Form' />
+			</form>
+		</div>
 	</div>
-	<div class="item4">
-		<img src="placeholder.png"/ id="photo">
-	</div>
-	<div class="item5">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<!-- submit button div -->
-		<div>Submit</div>
-	</div>
+		<img src="HMprof.png" id="photo">
 </div>
 {% endblock %}

@@ -27,7 +27,6 @@ button.current{
 	color: white;
 	background:#0090c4;
 	border-radius: 6px;
-	margin: 0%;
 	font-size: 14px;
 	border: none;
 	cursor: pointer;
@@ -105,6 +104,7 @@ div.side{
     border-radius: 8px;
     margin: 15% 0;
 }
+
 /* default for pictures */
 #pic2{
     width: 50%;

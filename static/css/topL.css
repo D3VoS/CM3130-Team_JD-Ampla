@@ -3,7 +3,10 @@ body{
   background: rgb(181, 216, 255);
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0px;
-  background-image: url("/static/img/Bubbles.png");
+  background-image: url(/static/img/Bubbles.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: fixed;
 }
 
 p {

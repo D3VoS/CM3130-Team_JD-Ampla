@@ -1,6 +1,7 @@
 .logo{
 	width: 100px;
 }
+
 /*top title*/
 p.title{
 	margin: 0%;	
@@ -8,6 +9,7 @@ p.title{
   text-align: center;
 	font-size: 40px;
 }
+
 /*account button*/
 button.current{
 	background:#8671E1;
@@ -19,6 +21,7 @@ button.current{
 	font-size: 14px;
 	border: none;
 }
+
 .ac{
 	float: right;
 	color: white;
@@ -28,8 +31,8 @@ button.current{
 	font-size: 14px;
 	border: none;
 	cursor: pointer;
+	margin: 2px;
 }
-
 
 a.butn{
 	display: block;

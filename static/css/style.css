@@ -213,3 +213,8 @@ label {
 input[value="Submit Form"] {
     float: left;
 }
+
+p.header {
+    text-shadow: 3px 2px black;
+    color: white;
+}

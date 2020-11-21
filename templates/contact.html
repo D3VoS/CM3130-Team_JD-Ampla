@@ -5,14 +5,15 @@
 <div class="grid-container">
 	<!-- form layout -->
 	<div class="item2">
-		<div class="box">
+		<div class="box" style="
+		margin-top: 5%;
+	">
 			<form method='POST' > {% csrf_token %}
 				{{ form.as_p }}
 				<input type='submit' value='Submit Form' />
 			</form>
-			<p>`</p>
+			<p style="color:white;font-size: 0.1px;">`</p>
 		</div>
 	</div>
-		<img src="HMprof.png" id="photo">
 </div>
 {% endblock %}

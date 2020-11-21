@@ -171,7 +171,8 @@ p.heading{
 }
 
 input#id_consent {
-    width: 15px;
+	width: 15px;
+	float: left;
 }
 
 textarea#id_message {
@@ -199,5 +200,13 @@ input[type="submit"] {
 }
 
 label {
+    float: left;
+}
+
+.sp{
+	padding: 15%;
+}
+
+input[type="submit"] {
     float: left;
 }

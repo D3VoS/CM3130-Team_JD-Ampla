@@ -207,6 +207,6 @@ label {
 	padding: 15%;
 }
 
-input[type="submit"] {
+input[value="Submit Form"] {
     float: left;
 }

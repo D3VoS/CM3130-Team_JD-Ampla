@@ -21,7 +21,9 @@ h1{
 	text-align: center;
 }
 
-
+li{
+  list-style: none;
+}
 
 /*Nav items*/
 ul {

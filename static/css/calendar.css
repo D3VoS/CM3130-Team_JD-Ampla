@@ -1,19 +1,29 @@
 #app-calendar{
-    width: 90%;
+    width: 95%;
     margin: 30px auto auto auto;
+    background-color: #3098f8;
+    padding: 20px 0;
+    border-radius: 30px;
 }
-
+.calendarDates, .controlButtons, .calendarHeadings{
+    width:90%;
+    margin:auto;
+}
+    
 .controlsButtons{
     margin: auto;
-    width: 90%;
-    padding: 10px;
+    width: 100%;
 }
 
 #heading{
-    font-size: 36px;
+    font-size: 72px;
     font-weight:bolder;
     text-align: center;
     margin-bottom: 15px;
+    color: #e6e6e6;
+    -webkit-text-stroke: 2px#001e57;
+    text-shadow: 2px 2px #000000;
+    cursor: default;
 }
 
 #botHeading{
@@ -24,7 +34,7 @@
 }
 
 .topControls{
-    margin: auto;
+    margin:auto auto 30px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 30%;
@@ -42,14 +52,16 @@
 
 .button{
     font-size: 20px;
+    font-style: bold;
     height:30px;
     text-align: center;
     border-radius: 10px 10px 10px 10px;
-    border: 1px grey solid;
+    border: 2px #001e57 solid;
+    margin: 0 30px;
 }
 
 .calendarDates{
-    border-left:3px solid black;
+    border-left:3px solid #001e57;
 }
 
 .calendarDates, .calendarHeadings{
@@ -60,30 +72,35 @@
 .calendarDateDay{
     font-size: 24px;
     text-align: center;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    border-top: 3px solid #001e57;
+    border-bottom: 3px solid #001e57;
+    cursor: default;
+    background-color: #d4f4ff;
 }
 
 .calendarDateDay:last-child{
-    border-right: 3px solid black;
+    border-right: 3px solid #001e57;
 }
 
 .calendarDateDay:first-child{
-    border-left: 3px solid black;
+    border-left: 3px solid #001e57;
 }
 
 .day{
-    background-color: #cccccc;
+    background-color: #88defd;
     padding-bottom: 80%;
     margin:0;
     font-size: 20px;
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
+    border-right: 3px solid #001e57;
+    border-bottom: 3px solid #001e57;
     cursor: pointer;
+    transition: .2s;
 }
 
 .day:hover{
-    background-color: #ffffff;
+    transform: scale(1.2);
+    border-left: 3px solid #001e57;
+    border-top: 3px solid #001e57;
 }
 
 .controlButtons .button{
@@ -93,3 +110,16 @@
 .controlButtons .button:hover{
     background-color: #cccccc;
 }
+
+#today{
+    background-color: #bcdeff;
+}
+
+.spacer{
+    border-bottom: 3px solid #001e57;
+}
+
+.spacer:last-of-type{
+    border-right: 3px solid #001e57;
+}
+

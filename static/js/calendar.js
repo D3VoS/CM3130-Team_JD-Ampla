@@ -31,6 +31,10 @@ $(document).ready(function(){
         for (let weekday = 1; weekday <= getFirstDayOfMonth(calculatedMonth, calculatedYear); weekday++){
             $(".calendarDates").append(`<div class = "spacer"></div>`);
         }
+
+        $('div.spacer:last').css({
+            'border-right': '3px solid #001e57'
+        })
         
         for (let day = 1; day <= getNoOfDaysInMonth(calculatedMonth, calculatedYear); day++){
 

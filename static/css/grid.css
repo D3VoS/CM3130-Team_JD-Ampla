@@ -29,10 +29,3 @@
     'footer footer footer footer footer footer';
 	display: block;
 }
-
-/* footer possition */
-.grid-container-bot{
-	display: grid;
-	grid-template-areas:
- 	 'logo desc desc link link link';
-}

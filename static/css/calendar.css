@@ -37,16 +37,8 @@
     margin:auto auto 30px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 30%;
-    cursor: pointer;
-}
-
-.botControls{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin:auto auto 30px auto;
-    width: 30%;
-    text-align: center;
+    width: 60%;
+    min-width: 150px;
     cursor: pointer;
 }
 

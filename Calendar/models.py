@@ -14,6 +14,8 @@ class event(models.Model):
     eventCost = models.FloatField(max_length=6)
     eventBooked = models.IntegerField()
 
+#def create_event()
+
 class bookingEvent(models.Model):
     bookingEventID = models.ForeignKey(event, on_delete=models.CASCADE)
     bookingUser = models.ForeignKey(User, on_delete=models.CASCADE)

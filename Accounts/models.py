@@ -33,6 +33,7 @@ class UserManager(BaseUserManager):
         )
         user_obj.admin = True
         user_obj.staff = True
+        user_obj.save(using=self._db)
         return user_obj 
 
 class User(AbstractBaseUser):

@@ -19,9 +19,8 @@ class ContactForm(ModelForm):
 
     class Meta:
         model = Contact
-        fields = ('title', 'message', 'consent')
+        fields = ('title', 'message')
         labels = {
             'title': _('Title'),
-            'message': _('Message'),
-            'consent': _('Consent')
+            'message': _('Message')
         }

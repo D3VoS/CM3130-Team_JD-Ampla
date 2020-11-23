@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
-<a href={% url 'Core:Store:add_product'%}><button>Add Product</button></a><a href={% url 'Core:archived_forms'%}><button>View Archive</button></a>
+<a href={% url 'Core:Store:add_product'%}><button class="adm" style="background: teal ;">Add Product</button></a>
+<a href={% url 'Core:archived_forms'%}><button class="adm" style="background: coral;">View Archive</button></a>
 {% for item in items %}
     {% if item.is_active %}
     <div class="box" style="margin-top: 25px;">
-        <a href="{% url 'Core:findByID' item.id %}"><p> Title: {{item.title}}    Submitted: {{item.date}}</a>  <a href="{% url 'Core:archive' item.id %}"><button>Archive</button></a> {{item.active}}</p>
+        <a href="{% url 'Core:findByID' item.id %}"><p> Title: {{item.title}}    Submitted: {{item.date}}</a>  <a href="{% url 'Core:archive' item.id %}"><button class="adm" style="background: firebrick">Archive</button></a> {{item.active}}</p>
     </div>
     {% endif %}
 {% endfor %}

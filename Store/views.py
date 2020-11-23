@@ -24,8 +24,11 @@ def AddProduct(request):
     context = {'form':form}
     return render(request, 'addProduct.html', context)
 
-def RemoveProduct(request):
-    pass
+@user_passes_test(lambda u: u.is_staff)
+def RemoveProduct(request, id):
+    obj = Product.objects.filter(id=id);
+    obj.delete()
+    return redirect('Core:Store:store_index')
 
 def ProductManagementPage(request):
     pass

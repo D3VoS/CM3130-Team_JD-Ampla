@@ -3,8 +3,10 @@
 {% block body %}
 
 {% for item in items %}
-    <p> Title: {{item.title}}</p> 
-    <p> Message: {{item.message}} </p>
-    <p> E-mail: {{item.creator.email}} </p>
+    <div class="box">
+        <p> Title: {{item.title}}</p> 
+        <p> Message: {{item.message}} </p>
+        <p> E-mail: {{item.creator.email}} </p>
+    </div>
 {% endfor %}
 {% endblock %}

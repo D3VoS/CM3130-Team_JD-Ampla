@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<a href={% url 'Core:admin'%}><button>Back</button></a>
+{% for item in items %}
+    {% if not item.is_active %}
+    <div class="box" style="margin-top: 25px;">
+        <a href="{% url 'Core:findByID' item.id %}"><p> Title: {{item.title}}    Submitted: {{item.date}}</a></p>
+    </div>
+    {% endif %}
+{% endfor %}
+{% endblock %}

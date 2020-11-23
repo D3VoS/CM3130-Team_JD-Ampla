@@ -26,4 +26,6 @@ urlpatterns = [
     path('store/', include('Store.urls', namespace='Store')),
     path('admin/', views.admin_index, name='admin'),
     path('admin/<int:id>', views.findByID, name='findByID'),
+    path('admin/archive/<int:id>', views.archive, name='archive'),
+    path('admin/archived_forms', views.archived_forms, name='archived_forms'),
 ]

@@ -44,3 +44,15 @@ def findByID(request, id):
     print(len(item))
     context = {"items": item}
     return render(request, 'contact_view.html', context)
+
+
+@user_passes_test(lambda u: u.is_staff)
+def archive(request, id):
+    item = Contact.objects.filter(id=id).update(active=False)
+    return redirect('Core:admin')
+
+
+def archived_forms(request):
+    items = Contact.objects.all()
+    context = {"items": items}
+    return render(request, 'archived_forms.html', context)

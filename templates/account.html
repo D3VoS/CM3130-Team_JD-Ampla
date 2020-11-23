@@ -1,33 +1,44 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
-<!-- main page -->
-<div class="grid-container">
-	<!-- form layout -->
-	<div class="item2">
+<!-- main page -->	
+<div  class="box" style="margin-top: 25px;">
 		<!-- profile picture-->
-		<div>profile pic</div>
-	</div>
-	<div class="item6">
+		<div><img src={% static "/img/pr.png" %} style="
+			width: 100px;
+			float:left;
+			margin-right: 20px;
+			margin-top: 15px;
+			height: auto;
+			float:left;
+			margin-right: 20px;
+			border-radius: 10px;
+		"></div>
 
-	</div>
-		<div class="item5">		
-			{% if user.is_authenticated %}
-			<i style="float: right; padding: 1px" class="far fa-user"></i>
-			{% else %}
-			<i style="float: right; padding: 1px" class="fas fa-star"></i>
-			{% endif %}
-			<!-- username div -->
-			<div>{{ user.get_full_name }}</div>	
 
-			<!-- email -->
-			<div>{{ user.email }}</div>
-			<!-- change password button div-->
-		
-			<!-- new password div-->
-			<div></div>
-			<!-- confirm new password div-->
-			<div></div>
-	</div>
+		{% if user.is_authenticated %}
+		<i style="float: right; padding: 1px;margin-top: 10px;
+" class="far fa-user"></i>
+		{% else %}
+		<i style="float: right; padding: 1px;margin-top: 10px;"
+		class="fas fa-star"></i>
+		{% endif %}
+		<!-- username div -->
+		<div style="
+		margin-top: 30px;
+		">Name:{{ user.get_full_name }}</div>	
+
+		<!-- email -->
+		<div style="
+		margin-top: 30px;
+		margin-bottom: 30px;
+		">Email: 
+			{{ user.email }}</div>
+		<!-- change password button div-->
+	
+		<!-- new password div-->
+		<div></div>
+		<!-- confirm new password div-->
+		<div></div>
 </div>
 {% endblock %}

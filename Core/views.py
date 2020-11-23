@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import user_passes_test
 from .models import Contact
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
+
 
 
 # Create your views here.
@@ -29,12 +31,14 @@ def contact(request):
     }
     return render(request, 'contact.html', context)
 
+
+@user_passes_test(lambda u: u.is_staff)
 def admin_index(request):
     items = Contact.objects.all()
     context = {"items": items}
     return render(request, 'admin_index.html', context)
 
-
+@user_passes_test(lambda u: u.is_staff)
 def findByID(request, id):
     item = Contact.objects.all().filter(id=id)
     print(len(item))

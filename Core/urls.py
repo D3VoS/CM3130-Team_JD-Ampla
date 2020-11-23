@@ -25,4 +25,5 @@ urlpatterns = [
     path('calendar/', include('Calendar.urls', namespace='Calendar')),
     path('store/', include('Store.urls', namespace='Store')),
     path('admin/', views.admin_index, name='admin'),
+    path('admin/<int:id>', views.findByID, name='findByID'),
 ]

@@ -32,5 +32,11 @@ def contact(request):
 def admin_index(request):
     items = Contact.objects.all()
     context = {"items": items}
-    print(len(context['items']))
     return render(request, 'admin_index.html', context)
+
+
+def findByID(request, id):
+    item = Contact.objects.all().filter(id=id)
+    print(len(item))
+    context = {"items": item}
+    return render(request, 'contact_view.html', context)

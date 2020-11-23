@@ -7,3 +7,4 @@ class Contact(models.Model):
     title = models.CharField(max_length=256)
     message = models.TextField()
     consent = models.BooleanField()
+    date = models.DateTimeField(auto_now=True)

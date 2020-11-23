@@ -11,25 +11,23 @@
 	<div class="item6">
 
 	</div>
-	<div class="item5" style="background: white">		
-		{% if user.is_authenticated %}
-		<i style="float: right; padding: 1px" class="far fa-user"></i>
-		{% else %}
-		<i style="float: right; padding: 1px" class="fas fa-star"></i>
-		{% endif %}
-		<!-- username div -->
-		<div>{{ user.get_full_name }}</div>	
+		<div class="item5">		
+			{% if user.is_authenticated %}
+			<i style="float: right; padding: 1px" class="far fa-user"></i>
+			{% else %}
+			<i style="float: right; padding: 1px" class="fas fa-star"></i>
+			{% endif %}
+			<!-- username div -->
+			<div>{{ user.get_full_name }}</div>	
 
-		<!-- email -->
-		<div>{{ user.email }}</div>
-		<!-- change password button div-->
-	
-		<!-- new password div-->
-		<div></div>
-		<!-- confirm new password div-->
-		<div></div>
-	<!-- submit button div -->
-	<div></div>
-	<div>
+			<!-- email -->
+			<div>{{ user.email }}</div>
+			<!-- change password button div-->
+		
+			<!-- new password div-->
+			<div></div>
+			<!-- confirm new password div-->
+			<div></div>
+	</div>
 </div>
 {% endblock %}

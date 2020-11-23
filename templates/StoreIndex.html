@@ -3,6 +3,6 @@
 {% block body %}
 <!-- main page -->
 {% for item in items %}
-<p> Name: {{ item.productName }}  Price: {{ item.productPrice }} <img src="{{ item.productImageLink }}"/> </p> <br>
+<p> Name: {{ item.productName }}  Price: {{ item.productPrice }} <img src="{{ item.productImageLink }}" height=25 width=25/> </p> <br>
 {% endfor %}
 {% endblock %}

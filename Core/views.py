@@ -3,6 +3,8 @@ from .forms import ContactForm
 from django.contrib import messages
 from django.contrib.auth.decorators import user_passes_test
 from .models import Contact
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def index(request):
@@ -11,6 +13,7 @@ def index(request):
 def about(request):
     return render(request, 'about.html')
 
+@login_required
 def contact(request):
     form = ContactForm(creator=request.user, data=request.POST or None)
     try:

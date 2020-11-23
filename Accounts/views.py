@@ -25,7 +25,7 @@ def login_page(request):
             #Redirects user to /
             return redirect('/')
         else:
-            print('Error')
+            print('Error,', form.errors)
     #Return the login webpage to the user
     return render(request, "login.html", context)
 

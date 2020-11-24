@@ -12,9 +12,10 @@ class event(models.Model):
     eventDescription = models.CharField(max_length=1000)
     eventCapacity = models.IntegerField()
     eventCost = models.FloatField(max_length=6)
-    eventBooked = models.IntegerField()
+    eventBooked = models.IntegerField(default=0)
 
-#def create_event()
+    def __str__(self):
+        return f'{self.eventCreator} { self.eventDate}'
 
 class bookingEvent(models.Model):
     bookingEventID = models.ForeignKey(event, on_delete=models.CASCADE)

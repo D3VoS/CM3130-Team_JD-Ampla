@@ -6,7 +6,7 @@
 {% for item in items %}
     {% if item.is_active %}
     <div class="box" style="margin-top: 25px;">
-        <a href="{% url 'Core:findByID' item.id %}"><p> Title: {{item.title}}    Submitted: {{item.date}}</a>  <a href="{% url 'Core:archive' item.id %}"><button class="adm" style="background: firebrick">Archive</button></a> {{item.active}}</p>
+       <p><a href="{% url 'Core:archive' item.id %}"><button class="adm" style="background: firebrick">Archive</button></a>   <a href="{% url 'Core:findByID' item.id %}"> Title: {{item.title}}    Submitted: {{item.date}}</a></p>
     </div>
     {% endif %}
 {% endfor %}

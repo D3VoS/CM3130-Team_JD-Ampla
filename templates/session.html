@@ -19,10 +19,8 @@
 
     <div class = sessionContainer>
         <form method = "POST">
-            <div class = 'formfield'>
-                {% csrf_token %}
-                {{ form }}
-            </div>
+             {% csrf_token %}
+            {{ form.as_p }}
             <input type = "submit" value = "create"/>
         </form>
     </div>

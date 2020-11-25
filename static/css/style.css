@@ -248,3 +248,20 @@ p.header {
 	margin-top: 10px;
 	margin-left: 10px;
   }
+
+  .store{
+	display: grid;
+	width: 200px;
+	height: 200px;
+	margin: 100px;
+	padding: 32px;
+	align-items: middle;
+	display: inline-block;
+  }
+
+  .product{
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 2px solid rgba(0, 0, 0, 0.8);
+	text-align: center;
+	font-size: 30px;
+  }

@@ -3,6 +3,8 @@
 {% block body %}
 <!-- main page -->
 {% for item in items %}
-<p> Name: {{ item.productName }}  Price: {{ item.productPrice }} <img src="{{ item.productImageLink }}" height=25 width=25/>{% if user.is_admin %} <a href="{% url 'Core:Store:remove_product' item.id %}"><button class="adm" style="background: firebrick;">Remove</button></a> {{item.active}}{% endif %} </p><br>
+<div class="store">
+    <div class="product"><center><img src="{{ item.productImageLink }}" height=150 width=150/><p> <b>Name:</b> {{ item.productName }} <br> <b>Price:</b> {{ item.productPrice }} {% if user.is_admin %} <a href="{% url 'Core:Store:remove_product' item.id %}"><button class="adm" style="background: firebrick;">Remove</button></a> {{item.active}}{% endif %} </p></center></div>
+</div>
 {% endfor %}
 {% endblock %}

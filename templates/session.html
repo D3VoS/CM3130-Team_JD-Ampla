@@ -35,9 +35,13 @@
                     <p>{{event.eventStart|date:"G:i"}} - {{event.eventEnd|date:"G:i"}}</p>
                     <form method="POST">
                         {% csrf_token %}
+                        {% if user.is_authenticated %}
                         <input type="hidden" name="bookingUser" value="{{user.id}}"/>
                         <input type="hidden" name="bookingEventID" value="{{event.id}}"/>
                         <input type="submit" name="join" value="Join Class"/>
+                        {% else %}
+                        <p>To join a session, please Register!</p>
+                        {% endif %}
                     </form>
                 </div>
                 <div class = "subcontents">

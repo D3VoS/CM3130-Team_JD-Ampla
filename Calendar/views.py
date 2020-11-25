@@ -10,7 +10,9 @@ def calendar(request):
     return render(request, 'calendar.html')
 
 def session(request):
-    form  = createSession(request.POST or None)
+    user = request.user
+
+    form  = createSession(request.POST or None, initial = {'eventCreator': user} )
     if form.is_valid():
         form.save()
 

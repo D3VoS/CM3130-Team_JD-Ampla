@@ -1,5 +1,4 @@
 from django.db import models
-from Accounts.models import User
 # Create your models here.
 
 class event(models.Model):
@@ -13,8 +12,6 @@ class event(models.Model):
     eventCapacity = models.IntegerField()
     eventCost = models.FloatField(max_length=6)
     eventBooked = models.IntegerField(default=0)
-
-#def create_event()
 
 class bookingEvent(models.Model):
     bookingEventID = models.ForeignKey(event, on_delete=models.CASCADE)

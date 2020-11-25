@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect
-from django.views.decorators.http import require_POST
+from django.shortcuts import render
+from datetime import date, datetime
 
-from Accounts.models import User
 from .models import event
-from .forms import createSession
+from Accounts.models import User
+from .forms import createSession, bookingEvent
 
 # Create your views here.
 def calendar(request):
@@ -11,12 +11,28 @@ def calendar(request):
 
 def session(request):
     user = request.user
-
+    
+    events = event.objects.filter(eventDate__gte = date.today()).order_by('eventDate')
+    
     form  = createSession(request.POST or None, initial = {'eventCreator': user} )
-    if form.is_valid():
-        form.save()
+
+    if request.method == 'POST' and 'create' in request.POST:
+        if form.is_valid():
+            form.save(form.cleaned_data)
 
     context =  {
-        'form': form
+        'form': form,
+        'events': events,
+        'user': user
     }
+
+    if request.method == 'POST' and "join" in request.POST :
+        if request.POST.get('bookingUser') and request.POST.get('bookingEventID'):
+            book=bookingEvent()
+            book.bookingEventID = event.objects.get(id = request.POST.get('bookingEventID'))
+            book.bookingUser = User.objects.get(id = request.POST.get('bookingUser'))
+            book.save()
+
     return render(request, 'session.html', context)
+
+    

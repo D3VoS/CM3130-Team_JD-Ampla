@@ -21,13 +21,39 @@
         <form method = "POST">
              {% csrf_token %}
             {{ form.as_p }}
-            <input type = "submit" value = "create"/>
+            <input type = "submit" name = "create" value = "create"/>
         </form>
     </div>
     {% endif %}
 
     <div class = "avilableSessions">
-        
+        {% for event in events %}
+            <div class = "event">
+                <h3>{{ event.eventName }}</h3>
+                <div class = "contents">
+                    <h4>{{event.eventDate|date:"d/m/Y"}}</h4>
+                    <p>{{event.eventStart|date:"G:i"}} - {{event.eventEnd|date:"G:i"}}</p>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="bookingUser" value="{{user.id}}"/>
+                        <input type="hidden" name="bookingEventID" value="{{event.id}}"/>
+                        <input type="submit" name="join" value="Join Class"/>
+                    </form>
+                </div>
+                <div class = "subcontents">
+                    <p>
+                        Capacity: {{event.eventCapacity}}
+                    </p>
+                    <p>
+                        Price: £{{event.eventCost}}
+                    </p>
+                    <p>
+                        {{event.eventDescription}}
+                    </p>
+                </div>
+            </div>
+            
+        {% endfor %}
     </div>
 </div>
 

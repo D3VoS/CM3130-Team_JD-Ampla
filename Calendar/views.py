@@ -10,18 +10,11 @@ def calendar(request):
     return render(request, 'calendar.html')
 
 def session(request):
+    form  = createSession(request.POST or None)
+    if form.is_valid():
+        form.save()
 
-    newEvent = createSession()
-
-    context = {'form' : newEvent}
-
+    context =  {
+        'form': form
+    }
     return render(request, 'session.html', context)
-
-@require_POST
-def createEvent(request):
-    newEvent = createSession(request.POST)
-
-    if newEvent.is_valid():
-        newEvent.save()
-
-    return redirect('session.html')

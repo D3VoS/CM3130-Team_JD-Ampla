@@ -3,7 +3,7 @@ from Accounts.models import User
 # Create your models here.
 
 class event(models.Model):
-    eventCreator = models.ForeignKey(User, on_delete=models.CASCADE)
+    eventCreator = models.ForeignKey('Accounts.User', on_delete=models.CASCADE)
     eventName = models.CharField(max_length=50)
     eventDate = models.DateField()
     eventLocation = models.CharField(max_length=50)
@@ -14,9 +14,8 @@ class event(models.Model):
     eventCost = models.FloatField(max_length=6)
     eventBooked = models.IntegerField(default=0)
 
-    def __str__(self):
-        return f'{self.eventCreator} { self.eventDate}'
+#def create_event()
 
 class bookingEvent(models.Model):
     bookingEventID = models.ForeignKey(event, on_delete=models.CASCADE)
-    bookingUser = models.ForeignKey(User, on_delete=models.CASCADE)
+    bookingUser = models.ForeignKey('Accounts.User', on_delete=models.CASCADE)

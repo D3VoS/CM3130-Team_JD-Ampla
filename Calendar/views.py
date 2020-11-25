@@ -8,14 +8,16 @@ from .forms import createSession
 
 # Create your views here.
 def calendar(request):
-    user = request.user
+    user = str(request.user)
     cursor = connection.cursor()
     cursor.execute(
         '''
         SELECT eventName, eventDate, eventStart, eventEnd
-        FROM Calendar_bookingevent, Calendar_event
-        WHERE Calendar_event.id = Calendar_bookingevent.bookingeventid_id AND bookinguser_id = 2 
-        '''
+        FROM Calendar_bookingevent, Calendar_event, Accounts_user
+        WHERE Calendar_event.id = Calendar_bookingevent.bookingEventID_id 
+        AND Calendar_bookingevent.bookingUser_id = Accounts_user.id 
+        AND Accounts_user.email = %s 
+        ''', [user]
         )
     x = cursor.description
     results = cursor.fetchall()
@@ -32,9 +34,6 @@ def calendar(request):
     context = {
         "events" : bookedEvents
     }
-    print(context)
-    
-
     return render(request, 'calendar.html', context)
 
 def session(request):

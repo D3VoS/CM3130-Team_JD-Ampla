@@ -1,6 +1,7 @@
 from django.db import connection
 from django.shortcuts import render
 from datetime import date, datetime
+from json import dumps
 
 from .models import event, bookingEvent
 from Accounts.models import User
@@ -32,7 +33,7 @@ def calendar(request):
 
     bookedEvents = resultsList
     context = {
-        "events" : bookedEvents
+        "events" : dumps(bookedEvents,  indent=4, sort_keys=True, default=str)
     }
     return render(request, 'calendar.html', context)
 

@@ -2,8 +2,9 @@
 {% load static %}
 {% block body %}
 
-<script src = "{% static 'js/session.js' %}"></script>
 <link href = "{% static 'css/session.css'%}" type = "text/css" rel = "stylesheet" media = "screen, projection"/>
+<link href = "{% static 'css/createsession.css'%}" type = "text/css" rel = "stylesheet" media = "screen, projection"/>
+<script src = "{% static 'js/createsession.js' %}"></script>
 
 <div class = "app-sessions">
     <h1>
@@ -11,15 +12,16 @@
     </h1>
 
     {% if user.is_staff %}
-    <script src = "{% static 'js/createsession.js' %}"></script>
-    <link href = "{% static 'css/createsession.css'%}" type = "text/css" rel = "stylesheet" media = "screen, projection"/>
-
     <div class = "createSessions">
-        <button type = "button"> Create Session </button>
+        <input type = "submit" value="Create New Session" id = "sessionbutton"/>
     </div>
 
-    <div class = sessionContainer>
-        <form method = "POST">
+    <div class = "sessionContainer" id = "sesCon">
+        <form method = "POST" id="createForm">
+            <div id="closeSpacer">
+                <span class="close">&#xD7;</span>
+            </div>
+            
              {% csrf_token %}
             {{ form.as_p }}
             <input type = "submit" name = "create" value = "Create"/>

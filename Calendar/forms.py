@@ -9,18 +9,18 @@ class createSession(forms.ModelForm):
 
         fields = [
         'eventCreator',
-        'eventName', 
+        'eventName',
+        'eventDescription',
+        'eventLocation',
         'eventDate', 
-        'eventLocation', 
         'eventStart', 
         'eventEnd',
-        'eventDescription', 
         'eventCapacity', 
         'eventCost'
         ]
 
         labels = {
-        'eventName': 'Name', 
+        'eventName': 'Event Name', 
         'eventDate': 'Date', 
         'eventLocation': 'Location', 
         'eventStart': 'Starting Time', 
@@ -32,12 +32,12 @@ class createSession(forms.ModelForm):
 
         widgets = {
             'eventCreator' : HiddenInput,
-            'eventName' : TextInput,
+            'eventName' : TextInput(attrs={'placeholder' : 'Swimming with Hannah! (Beginners)'}),
             'eventDate' : DateInput(format = ['%d/%m/%Y'], attrs={'type': 'date'}),
-            'eventLocation' : TextInput,
+            'eventLocation' : TextInput(attrs={'placeholder': 'Robert Gordon University Gym Hall 3'}),
             'eventStart' : TimeInput(attrs={'type': 'time'}),
             'eventEnd' : TimeInput(attrs={'type': 'time'}),
-            'eventDescription' : Textarea,
-            'eventCapacity' : NumberInput,
-            'eventCost' : NumberInput
+            'eventDescription' : Textarea(attrs={'placeholder':'Join me for an hour swim session where I will be teaching beginners the basics of swimming!'}),
+            'eventCapacity' : NumberInput(attrs={'placeholder':'The total Capacity of the sessiom, e.g. 30'}),
+            'eventCost' : NumberInput(attrs={'placeholder': 'Cost in Pounds: £30 = 30'})
         }

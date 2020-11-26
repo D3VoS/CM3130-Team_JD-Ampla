@@ -45,12 +45,17 @@
     </div>
 </div>
 <script>
-    
+    var data = JSON.parse("{{events|escapejs}}");
+    for (x in data){
+        var arr = data[x].eventDate;
+        console.log(arr)
+    }
 </script>
 <div id="testing xd">
-    {% for event in events %}
-    <p>{{event.eventName}}</p>
-{% endfor %}
+
+</div>
+<div id="test2">
+
 </div>
 
 

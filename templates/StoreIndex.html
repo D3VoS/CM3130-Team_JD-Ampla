@@ -4,7 +4,7 @@
 <!-- main page -->
 {% for item in items %}
 <div class="store">
-    <div class="product"><center><img src="{{ item.productImageLink }}" height=150 width=150/><p> <b>Name:</b> {{ item.productName }} <br> <b>Price:</b> {{ item.productPrice }} {% if user.is_admin %} <a href="{% url 'Core:Store:remove_product' item.id %}"><button class="adm" style="background: firebrick;">Remove</button></a> {{item.active}}{% endif %} </p></center></div>
+    <div class="product"><center><img src="{{ item.productImageLink }}" height=150 width=150/><p> <b>Name:</b> {{ item.productName }} <br> <b>Price:</b> {{ item.productPrice }} <a href="{{ item.productLink}}"><button>Buy</button></a> {% if user.is_admin %} <a href="{% url 'Core:Store:remove_product' item.id %}"><button class="adm" style="background: firebrick;">Remove</button></a> {{item.active}}{% endif %} </p></center></div>
 </div>
 {% endfor %}
 {% endblock %}

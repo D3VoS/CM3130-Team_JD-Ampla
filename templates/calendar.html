@@ -45,11 +45,25 @@
     </div>
 </div>
 <script>
-    var data = JSON.parse("{{events|escapejs}}");
-    for (x in data){
-        var arr = data[x].eventDate;
-        console.log(arr)
+$(document).ready(function(){
+
+    currentMonth = document.getElementById("heading").textContent.split(" ")[0];
+
+    function monthNo(x){
+        var months = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+        return $.inArray(x, months)
     }
+    
+    var d = new Date();
+    var month = d.getMonth();
+    var year = d.getYear() + 1900;
+
+    console.log(month, year)
+    var data = JSON.parse("{{events|escapejs}}");
+    
+});
+    
 </script>
 <div id="testing xd">
 
